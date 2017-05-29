@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <title>THE DUNGEON</title>
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+      <!-- Bootstrap core CSS -->
+      <link href="http://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.4/css/bootstrap.min.css" rel="stylesheet" media="screen">
+
+      <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+      <!--[if lt IE 9]>
+        <script src="http://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.2/html5shiv.js"></script>
+        <script src="http://cdnjs.cloudflare.com/ajax/libs/respond.js/1.4.2/respond.js"></script>
+      <![endif]-->
+
+  <link rel="stylesheet" type="text/css" href="gamestyle.css" />
+  <script src="https://code.jquery.com/jquery-1.12.0.min.js"></script>
+
+</head>
+<body>
+  <!--<body onload="fnLoad()">-->
+
+    <div class ="container">
+    <!--Monster display row-->
+    <div class="col-md-5 col-md-offset-5 row monster">
+
+      </div>
+
+      <!--Playable grid;
+      class="jewel" means playable pieces-->
+      <div class="col-md-5 col-md-offset-5 row tg-wrap" id="playable">
+        <table class="tg">
+        <tr>
+          <th class="grid">
+            <div class="jewel" data-num="0"></div>
+          </th>
+          <th class="grid">
+            <div class="jewel" data-num="1"></div>
+          </th>
+          <th class="grid">
+            <div class="jewel" data-num="2"></div>
+          </th>
+          <th class="grid">
+            <div class="jewel" data-num="3"></div>
+          </th>
+          <th class="grid">
+            <div class="jewel" data-num="4"></div>
+          </th>
+        </tr>
+        <tr>
+          <td class="grid">
+            <div class="jewel" data-num="5"></div>
+          </td>
+          <td class="grid">
+            <div class="jewel" data-num="6"></div>
+          </td>
+          <td class="grid">
+            <div class="jewel" data-num="7"></div>
+          </td>
+          <td class="grid">
+            <div class="jewel" data-num="8"></div>
+          </td>
+          <td class="grid">
+            <div class="jewel" data-num="9"></div>
+          </td>
+        </tr>
+        <tr>
+          <td class="grid">
+            <div class="jewel" data-num="10"></div>
+          </td>
+          <td class="grid">
+            <div class="jewel" data-num="11"></div>
+          </td>
+          <td class="grid">
+            <div class="jewel" data-num="12"></div>
+          </td>
+          <td class="grid">
+            <div class="jewel" data-num="13"></div>
+          </td>
+          <td class="grid">
+            <div class="jewel" data-num="14"></div>
+          </td>
+        </tr>
+        <tr>
+          <td class="grid">
+            <div class="jewel" data-num="15"></div>
+          </td>
+          <td class="grid">
+            <div class="jewel" data-num="16"></div>
+          </td>
+          <td class="grid">
+            <div class="jewel" data-num="17"></div>
+          </td>
+          <td class="grid">
+            <div class="jewel" data-num="18"></div>
+          </td>
+          <td class="grid">
+            <div class="jewel" data-num="19"></div>
+          </td>
+        </tr>
+        <tr>
+          <td class="grid">
+            <div class="jewel" data-num="20"></div>
+          </td>
+          <td class="grid">
+            <div class="jewel" data-num="21"></div>
+          </td>
+          <td class="grid">
+            <div class="jewel" data-num="22"></div>
+          </td>
+          <td class="grid">
+            <div class="jewel" data-num="23"></div>
+          </td>
+          <td class="grid">
+            <div class="jewel" data-num="24"></div>
+          </td>
+        </tr>
+      </table>
+      </div>
+    </div>
+    <h3 id="time">You have 60 secs left.</h3>
+    <!--    <div class="container">
+                <div>
+                        <select id="grid">
+                        </select>
+                        <button name="NewGame" class="newGame" value="Start a New Game" onclick="fnNewGame()">Start a New Game</button>
+                </div>
+                <div class="minContainer">
+                        <table class="row" id="game"></table>
+                </div>
+        </div> -->
+<script type="text/javascript" src="gamemovement.js"></script>
+</body>
+
+</html>
