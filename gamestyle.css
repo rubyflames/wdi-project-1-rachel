@@ -6,15 +6,20 @@
 
 body{
   background-image: url(http://imgs.abduzeedo.com/files/articles/wicked-fighting-game-background-gifs/njPhhkca.gif);
-  background-position: center;
-  background-size: cover;
+  background-position: cover;
+  background-size: 100%;
   background-repeat: no-repeat;
+}
+
+h1 {
+  font-family: sans-serif;
+  color: #ffffff;
 }
 
 #playable {
   margin: auto 0px;
   position: absolute;
-  height:400px;
+  height: 400px;
   width: 400px;
 
 }
@@ -26,6 +31,13 @@ body{
   margin: 0px auto;
   padding: 80px 80px;
   position: absolute;
+  background-image: url(http://2.bp.blogspot.com/-KeQGwHib3lQ/UD_fipguVQI/AAAAAAAAIgQ/JMv8lC9c2dE/s400/Diablo-june.gif);
+  /*
+  alternative images for mmonsters:
+  background-image: url(http://static2.wikia.nocookie.net/__cb20120511203044/wowwiki/images/0/0c/Undead_male250x.gif);
+  background-image: url(http://static1.wikia.nocookie.net/__cb20120511203559/wowwiki/images/c/cb/Tauren_male250x.gif);
+  background-image: url(http://1.bp.blogspot.com/-8M90fwcTLUg/VWPbPlV7DpI/AAAAAAAAQfc/aOj3fbgO_-c/s1600/anim_wow_109.gif);
+  */
 }
 
 .tg  {
@@ -39,27 +51,28 @@ body{
   /*font-family:Arial, sans-serif;
   font-size:14px;
   padding:0px 0px;*/
-  padding:5px 5px;
+  padding:10px 10px;
   border-style: solid;
   border-color: white;
   border-width: 1px;
   overflow: hidden;
   /*word-break:normal;*/
-  height: 40px;
-  width: 40px;
+  height: 60px;
+  width: 60px;
 }
 .tg th {
   /*font-family:Arial, sans-serif;
   font-size:14px;
   font-weight:normal;*/
-  padding:5px 5px;
+  padding:10px 10px;
   border-style: solid;
   border-color: white;
   border-width:1px;
   overflow:hidden;
   /*word-break:normal;*/
-  height: 40px;
-  width: 40px;}
+  height: 60px;
+  width: 60px;
+}
 
 .tg .grid{vertical-align:bottom;}
 
@@ -73,13 +86,47 @@ body{
 }
 
 .jewel {
-  height: 30px;
-  width: 30px;
-  background-color: red;
+  height: 40px;
+  width: 40px;
+  /*background-color: red;*/
   position: center;
-  top:15px;
-  left:15px;
+  top: 20px;
+  left: 20px;
   border-radius: 50%;
+  border-color: red;
+  border-style: solid;
+}
+.red{
+  background-image: url("./jewel_red.png");
+  height: 40px;
+  width: 40px;
+  background-position: cover;
+  background-size: 100%;
+  background-repeat: no-repeat;
+}
+.green{
+  background-image: url("./jewel_green.png");
+  height: 40px;
+  width: 40px;
+  background-position: cover;
+  background-size: 100%;
+  background-repeat: no-repeat;
+}
+.blue{
+  background-image: url("./jewel_blue.png");
+  height: 40px;
+  width: 40px;
+  background-position: cover;
+  background-size: 100%;
+  background-repeat: no-repeat;
+}
+.hourglassplay {
+  background-image: url("./hourglass_playable.jfif");
+  height: 40px;
+  width: 40px;
+  background-position: cover;
+  background-size: 100%;
+  background-repeat: no-repeat;
 }
 
 h3 {

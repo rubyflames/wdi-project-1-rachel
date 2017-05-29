@@ -1,8 +1,9 @@
-// var grid = document.getElementByClassName("grid");
+var grid = document.getElementByClassName('grid');
 
 $('.grid').on('click', function(e){
   console.log("clickable");
 })
+
 
 
 function init(){
@@ -16,29 +17,38 @@ function init(){
 //alt: ballElement = document.getBoundingClientRect()
 //this determines the dimensions of the rectangle of the element in question
 //e.g. this refers to the box element of the ball
+  var random = Math.floor((Math.random() * 100) + 1);
+
+  var jewel = document.getElementByClassName("jewel");
+
+      if (random < 26) {
+        console.log(random);
+        jewel.classList.add('red');
+      } else if (Math.floor < 51) {
+        console.log(random);
+        jewel.classList.add('blue');
+      } else if (Math.floor < 76) {
+          console.log(random);
+          jewel.classList.add('green');
+      } else {
+          console.log(random);
+          jewel.classList.add('hourglass');
+      };
     }
 
 /*
 var timeLeft = 60;
-    $('#time').on('click', function(e){
 
-      setTimeout(myFunction, 60000);
-      display();
-      console.log("timer starts");
-    });
     function display(timeLeft=60; timeLeft > -1; timeLeft--) {
         // timeLeft = timeLeft -1;
         // timeLeft--;
         var sec = parseInt(timeLeft);
         document.getElementById("time").innerHTML = "You have " + sec + " secs left.";
     }
-    function myFunction() {
-      alert("Time's up!");
-      console.log("time's up");
-    };
+
     */
 
-    var time =0;
+
   //  var timeLeft = 60;
 
     // The render function. It will be called 60/sec - renders everything in the game that you pass through it
@@ -55,19 +65,98 @@ var timeLeft = 60;
         }
         */
 
-var timeLeft = 60;
-$('#time').on('click', function(e){
-    setTimeout(myFunction, 60000);
-      console.log("timer starts");
-      function start() {
-        setInterval(function(){
-          timeLeft = timeLeft -1;
-          document.getElementById("demo").innerHTML = "You have " + timeLeft + " secs left.";
-          console.log(timeLeft);
-        }, 1000);}
-      })
+// var timeLeft = 60;
+// $('#time').on('click', function(e){
+//     setTimeout(myFunction, 60000);
+//       console.log("timer starts");
+//       function start() {
+//         setInterval(function(){
+//           timeLeft = timeLeft -1;
+//           document.getElementById("demo").innerHTML = "Time: " + timeLeft + " secs left.";
+//           console.log(timeLeft);
+//         }, 1000);}
+//       })
+
+//var gridpos = [0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24];
 
 
+
+array listed in clock-wise direction
+corners: 3 possible gridpos to connect
+sides: 5 possible gridpos to connect
+inner: 8 possible gridpos to connect
+
+for data-num = 0, connectable gridpos = [1,6,5];
+for data-num = 1, connectable gridpos = [2,7,6,5,0];
+for data-num = 2, connectable gridpos = [3,8,7,6,1];
+for data-num = 3, connectable gridpos = [4,9,8,7,2];
+for data-num = 4, connectable gridpos = [9,8,3];
+for data-num = 20, connectable gridpos = [15,16,21];
+for data-num = 24, connectable gridpos = [23,18,19];
+
+
+
+/*
+Timer:
+// your code here:
+function timer () {
+// Create Javascript selectors that target each of the timer buttons.
+  var resetButton, startButton, pauseButton, timerH1, timerId, seconds
+  function init () {
+    resetButton = document.getElementById('reset')
+    startButton = document.getElementById('start')
+    pauseButton = document.getElementById('pause')
+    timer = document.getElementById('time')
+    timerId = 60
+    seconds = 60
+    // Create click handlers (empty, for now) for each of the timer buttons.
+    resetButton.addEventListener('click', resetTimer)
+    startButton.addEventListener('click', startTimer)
+    pauseButton.addEventListener('click', pauseTimer)
+  }
+// Instantiate seconds and timerId variables for your timer. The latter will make more sense after reading up on setInterval().
+// Create an updateTime() function that increments the seconds counter and inserts that value into the <h1> element with id="timer".
+  function updateTime () {
+    seconds -= 1
+    timer.innerHTML = 'Time Elapsed: ' + seconds + "secs";
+  }
+// Inside your click handler for the start button...
+// Replace "Stop Watch" in the HTML with the content of the seconds variable.
+// Use setInterval() to increment the timer by 1 every second.
+  function startTimer () {
+    timer.innerHTML = 'Time Left: ' + seconds + "secs";
+    timerId = setInterval(updateTime, 1000)
+  }
+// Inside your click handler for the pause button...
+// Stop -- but do not reset! -- the timer using clearInterval().
+// Once again, inside your click handler for the start button...
+// Make sure the timer starts back up when you hit the "Start" button after hitting "Pause".
+  function pauseTimer () {
+    clearInterval(timerId)
+  }
+// Inside your click handler for the reset button...
+// Stop the timer using clearInterval().
+// Reset the timer.
+// Replace the time in your HTML with the original "Stop Watch" text.
+  function resetTimer () {
+    clearInterval(timerId)
+    seconds = 0
+    timerH1.innerHTML = 'Stop Watch'
+  }
+// Bonus
+//
+// Reformat your timer so that everything in your timers.js file -- variables and functions -- are part of a global object. It would look something like...
+  return {
+    init: init
+  }
+}
+document.addEventListener('DOMContentLoaded', function () {
+  var testTimer = timer();
+  testTimer.init()
+})
+*/
+
+// ---------------------------------------------------------------------------------------------------------------------
 
 //     var timeLeft = 60
 // $('#time').on('click', function(e){
