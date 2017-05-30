@@ -96,7 +96,7 @@ var table=[
       }
       */
 
-jewel.js
+game.html
 -------------------------------------------------------------------------------
 
 /*
@@ -203,3 +203,92 @@ function empty(pos){
     jewelElement.querySelector('data-num')= pos+5;
   }
 };
+
+
+
+
+<tr>
+  <th class="grid">
+    <div class="jewel" data-num="0"></div>
+  </th>
+  <th class="grid">
+    <div class="jewel" data-num="1"></div>
+  </th>
+  <th class="grid">
+    <div class="jewel" data-num="2"></div>
+  </th>
+  <th class="grid">
+    <div class="jewel" data-num="3"></div>
+  </th>
+  <th class="grid">
+    <div class="jewel" data-num="4"></div>
+  </th>
+</tr>
+<tr>
+  <td class="grid">
+    <div class="jewel" data-num="5"></div>
+  </td>
+  <td class="grid">
+    <div class="jewel" data-num="6"></div>
+  </td>
+  <td class="grid">
+    <div class="jewel" data-num="7"></div>
+  </td>
+  <td class="grid">
+    <div class="jewel" data-num="8"></div>
+  </td>
+  <td class="grid">
+    <div class="jewel" data-num="9"></div>
+  </td>
+</tr>
+<tr>
+  <td class="grid">
+    <div class="jewel" data-num="10"></div>
+  </td>
+  <td class="grid">
+    <div class="jewel" data-num="11"></div>
+  </td>
+  <td class="grid">
+    <div class="jewel" data-num="12"></div>
+  </td>
+  <td class="grid">
+    <div class="jewel" data-num="13"></div>
+  </td>
+  <td class="grid">
+    <div class="jewel" data-num="14"></div>
+  </td>
+</tr>
+<tr>
+  <td class="grid">
+    <div class="jewel" data-num="15"></div>
+  </td>
+  <td class="grid">
+    <div class="jewel" data-num="16"></div>
+  </td>
+  <td class="grid">
+    <div class="jewel" data-num="17"></div>
+  </td>
+  <td class="grid">
+    <div class="jewel" data-num="18"></div>
+  </td>
+  <td class="grid">
+    <div class="jewel" data-num="19"></div>
+  </td>
+</tr>
+<tr>
+  <td class="grid">
+    <div class="jewel" data-num="20"></div>
+  </td>
+  <td class="grid">
+    <div class="jewel" data-num="21"></div>
+  </td>
+  <td class="grid">
+    <div class="jewel" data-num="22"></div>
+  </td>
+  <td class="grid">
+    <div class="jewel" data-num="23"></div>
+  </td>
+  <td class="grid">
+    <div class="jewel" data-num="24"></div>
+  </td>
+</tr>

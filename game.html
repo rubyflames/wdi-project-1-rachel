@@ -16,7 +16,7 @@
       <![endif]-->
 
   <link rel="stylesheet" type="text/css" href="gamestyle.css" />
-  <script src="https://code.jquery.com/jquery-1.12.0.min.js"></script>
+  <!-- <script src="https://code.jquery.com/jquery-1.12.0.min.js"></script> -->
 
 </head>
 <body>
@@ -24,102 +24,16 @@
     <h1>Are you ready to challenge the dungeon?</h1>
 
     <div class ="container">
-    <!--Monster display row-->
-    <div class="col-md-5 col-md-offset-5 row monster">
-      </div>
+      <!--Monster display row-->
+      <div class="col-md-5 col-md-offset-5 row monster"></div>
 
       <!--Playable grid;
       class="jewel" means playable pieces-->
-      <div class="col-md-5 col-md-offset-5 row tg-wrap" id="playable">
-        <table class="tg">
-        <tr>
-          <th class="grid">
-            <div class="jewel" data-num="0"></div>
-          </th>
-          <th class="grid">
-            <div class="jewel" data-num="1"></div>
-          </th>
-          <th class="grid">
-            <div class="jewel" data-num="2"></div>
-          </th>
-          <th class="grid">
-            <div class="jewel" data-num="3"></div>
-          </th>
-          <th class="grid">
-            <div class="jewel" data-num="4"></div>
-          </th>
-        </tr>
-        <tr>
-          <td class="grid">
-            <div class="jewel" data-num="5"></div>
-          </td>
-          <td class="grid">
-            <div class="jewel" data-num="6"></div>
-          </td>
-          <td class="grid">
-            <div class="jewel" data-num="7"></div>
-          </td>
-          <td class="grid">
-            <div class="jewel" data-num="8"></div>
-          </td>
-          <td class="grid">
-            <div class="jewel" data-num="9"></div>
-          </td>
-        </tr>
-        <tr>
-          <td class="grid">
-            <div class="jewel" data-num="10"></div>
-          </td>
-          <td class="grid">
-            <div class="jewel" data-num="11"></div>
-          </td>
-          <td class="grid">
-            <div class="jewel" data-num="12"></div>
-          </td>
-          <td class="grid">
-            <div class="jewel" data-num="13"></div>
-          </td>
-          <td class="grid">
-            <div class="jewel" data-num="14"></div>
-          </td>
-        </tr>
-        <tr>
-          <td class="grid">
-            <div class="jewel" data-num="15"></div>
-          </td>
-          <td class="grid">
-            <div class="jewel" data-num="16"></div>
-          </td>
-          <td class="grid">
-            <div class="jewel" data-num="17"></div>
-          </td>
-          <td class="grid">
-            <div class="jewel" data-num="18"></div>
-          </td>
-          <td class="grid">
-            <div class="jewel" data-num="19"></div>
-          </td>
-        </tr>
-        <tr>
-          <td class="grid">
-            <div class="jewel" data-num="20"></div>
-          </td>
-          <td class="grid">
-            <div class="jewel" data-num="21"></div>
-          </td>
-          <td class="grid">
-            <div class="jewel" data-num="22"></div>
-          </td>
-          <td class="grid">
-            <div class="jewel" data-num="23"></div>
-          </td>
-          <td class="grid">
-            <div class="jewel" data-num="24"></div>
-          </td>
-        </tr>
-      </table>
+      <div class="col-md-5 col-md-offset-5 row tg-wrap">
+        <table class="tg" id="gameboard"></table>
       </div>
     </div>
+
     <h3 id="time">Time left: 60 secs</h3>
     <h3 id="start">Start</h3>
     <h3 id="reset">Reset</h3>
@@ -135,6 +49,7 @@
                 </div>
         </div> -->
 <script type="text/javascript" src="jewel.js"></script>
+<script type="text/javascript" src="gameboard.js"></script>
 <script type="text/javascript" src="game.js"></script>
 </body>
 

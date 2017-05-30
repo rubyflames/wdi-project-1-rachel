@@ -7,33 +7,21 @@ var Game = function() {
     settings.automatic = false;            // The ball will move by itself
     settings.godmode = false;              // Debug mode
     settings.timePerRound = 60;            // Time per round
+    settings.tableSize = 5;                // set table size
 
     // World settings
     var assets = [];                      // All game objects\
-    var tableSize = 5;
     var frame = 0;
-    var countdown = settings.timePerRound
+    var countdown = settings.timePerRound;
 
-    /*
-     *  Create the game table
-     */
-    function createTable(){
-      var table =[];
-
-      // init rows
-      for(var i = tableSize; i<tableSize;i++){
-        // init cols
-        for(var j = tableSize; j<tableSize;j++){
-            table[i][j] = new jewel(settings)
-        }
-      }
-    }
+    // Init gameboard
+    var gameBoard = new GameBoard(settings);
+    assets[0] = gameBoard;
 
     /*
      *  Initialize game
      */
     function init(){
-      createTable();
     }
 
     /*
@@ -41,19 +29,17 @@ var Game = function() {
      */
     this.render = function(){ // fix scope
 
-      if(frame%60==0 && stopwatch > 0){
-        console.log(stopwatch);
-        stopwatch--;
-        document.getElementById("time").innerHTML= "Time left: " + stopwatch + " secs";
+      if(frame%60==0 && countdown > 0){
+        countdown--;
+        document.getElementById("time").innerHTML= "Time left: " + countdown + " secs";
         //try to change the last display for the timer from -1 to 0
       }
 
       for(var i=0; i < assets.length; i++){
-        assets[i].render(interactions);
+        assets[i].render();
       }
 
       frame++; //frame needs to be included to count up, otherwise it would not wait for the full sec
-
     }
 
     /*
