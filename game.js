@@ -16,7 +16,13 @@ var Game = function() {
       jewels.push(new Jewel(settings,i));
     }
     var frame = 0;                        // Frames since the start of the game
-    
+    var table=[
+      [{0},{1},{2},{3},{4}],
+      [{0},{1},{2},{3},{4}],
+      [{0},{1},{2},{3},{4}],
+      [{0},{1},{2},{3},{4}],
+      [{0},{1},{2},{3},{4}]
+    ]
 
     // Interactions
     var interactions = {};
@@ -88,6 +94,8 @@ var Game = function() {
       setupEvents();
     }
 
+    //document.getElementById("reset").on('click', init());
+
     var frame=0;
     var stopwatch=60;
 
@@ -95,11 +103,11 @@ var Game = function() {
     // The render function. It will be called 60/sec i.e. 60 frames per sec
     function render(){
 
-      if(frame%60==0 && stopwatch >= 0){
+      if(frame%60==0 && stopwatch > 0){
         console.log(stopwatch);
         stopwatch--;
-
-        ///document.innerHTML("time")= "Time left: " + stopwatch + " secs";
+        document.getElementById("time").innerHTML= "Time left: " + stopwatch + " secs";
+        //try to change the last display for the timer from -1 to 0
       }
 
       for(var i=0; i < assets.length; i++){
