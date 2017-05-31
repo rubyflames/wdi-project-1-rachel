@@ -22,6 +22,14 @@
 <body>
   <!--<body onload="fnLoad()">-->
     <h1>Are you ready to challenge the dungeon?</h1>
+    <p>
+      •Defeat the monster (lower its HP to 0) before time is up!
+      <br />•The countdown timer starts at 60 seconds.
+      <br />•Click on any jewel in the grid to start a chain formation.
+      <br />•Connect at least 3 jewels of the same type in a chain.
+      <br />•Red, blue and green chains reduce the monster's HP.
+      <br />•Hourglass chains add time to the countdown timer.
+    </p>
 
     <div class ="container">
       <!--Monster display row-->
@@ -35,9 +43,9 @@
     </div>
 
     <h3 id="time">Time left: 60 secs</h3>
-    <h3 id="start">Start</h3>
-    <h3 id="reset">Reset</h3>
-    <h3 id="pause">Pause</h3>
+    <h3 id="start">Start</h3><div class="button start"></div>
+    <h3 id="reset">Reset</h3><div class="button reset"></div>
+    <h3 id="pause">Pause</h3><div class="button pause"></div>
     <!--    <div class="container">
                 <div>
                         <select id="grid">

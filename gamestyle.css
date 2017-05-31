@@ -15,6 +15,10 @@ h1 {
   font-family: sans-serif;
   color: #ffffff;
 }
+p {
+  font-family: sans-serif;
+  color: #ffffff;
+}
 
 #playable {
   margin: auto 0px;
@@ -45,6 +49,15 @@ h1 {
   border-spacing:0;
   margin:0px auto;
   position: absolute;
+}
+
+.grid:hover{
+    cursor:pointer;
+    background-color: rgba(256,256,256,0.3);
+}
+.highlight:hover{
+    cursor:pointer;
+    background-color: rgba(256,0,0,0.3);
 }
 
 .tg td {
@@ -137,6 +150,36 @@ h1 {
 h3 {
   font-family: cursive;
   color: #afafaf;
+}
+
+.button {
+  height: 40px;
+  width: 40px;
+  /*background-color: red;*/
+  position: center;
+  top: 20px;
+  left: 20px;
+  border-radius: 50%;
+  border-color: red;
+  border-style: solid;
+}
+.start {
+  background-image: url("https://cdn.pixabay.com/photo/2013/07/13/11/42/audio-158489_640.png");
+  background-position: cover;
+  background-size: 100%;
+  background-repeat: no-repeat;
+}
+.reset {
+  background-image: url("http://4vector.com/i/free-vector-stop-audio-button-set-clip-art_104739_Stop_Audio_Button_Set_clip_art_hight.png");
+  background-position: cover;
+  background-size: 100%;
+  background-repeat: no-repeat;
+}
+.pause {
+  background-image: url("https://openclipart.org/image/2400px/svg_to_png/11576/akiross-Audio-Button-Set-1.png");
+  background-position: cover;
+  background-size: 100%;
+  background-repeat: no-repeat;
 }
 
 /*

@@ -11,6 +11,16 @@ var Game = function() {
 
     // World settings
     var assets = [];                      // All game objects\
+
+    var interactions = {};
+    interactions.click = false;           // Speace key pressed
+
+    // Setup event listeners
+    function setupEvents() {
+
+      document.getElementsByClassName('reset').addEventListener('click', g());
+    }
+
     var frame = 0;
     var countdown = settings.timePerRound;
 
@@ -41,6 +51,8 @@ var Game = function() {
 
       frame++; //frame needs to be included to count up, otherwise it would not wait for the full sec
     }
+
+
 
     /*
      *  Game loop. Don't touch ;-)
