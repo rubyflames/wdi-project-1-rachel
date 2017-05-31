@@ -1,7 +1,7 @@
 function GameBoard(settings) {
 
   var gameBoardElement = null;
-  var table = [];
+  var jewels = [];
 
   /*
    *  Render
@@ -9,6 +9,31 @@ function GameBoard(settings) {
   this.render = function(){
 
   }
+
+  /*
+   *  Setup events
+   */
+   function setupEvents(){
+
+      gameBoardElement.addEventListener("click", function(e){
+
+        var target = e.target;
+        // Normalize if div is clicked
+        if(e.target.nodeName === "DIV"){
+          target = e.target.parentElement
+        }
+
+        var clickedJewel = {
+          row : parseInt( target.getAttribute('data-row')),
+          col: parseInt( target.getAttribute('data-col'))
+        }
+
+        // Link simelar sorounding jewels
+        var search = new Search(clickedJewel, jewels, settings);
+        search.start();
+
+      });
+   }
 
   /*
    *  Create jewels
@@ -24,15 +49,17 @@ function GameBoard(settings) {
       var row = document.createElement('tr');
       row.id = 'row_' + i;
       gameBoardElement.append(row);
+      jewels.push([])
 
       // init cols
       for(var j = 0; j<settings.tableSize;j++){
           var col = document.createElement('td');
           col.classList.add('grid');
-          col.id = 'col_' + j;
+        //  col.id = 'row_' + i +'_col_' + j;
+          col.setAttribute("data-row", i);
+          col.setAttribute("data-col", j);
           row.append(col);
-        
-        //  table[i][j] = new jewel(settings);
+          jewels[i][j] = new Jewel(settings, {row: i, col: j} );
       }
     }
   }
@@ -43,7 +70,7 @@ function GameBoard(settings) {
   function init(){
     gameBoardElement = document.getElementById('gameboard');
     create();
-
+    setupEvents();
   }
 
   init();

@@ -7,7 +7,7 @@ var Game = function() {
     settings.automatic = false;            // The ball will move by itself
     settings.godmode = false;              // Debug mode
     settings.timePerRound = 60;            // Time per round
-    settings.tableSize = 5;                // set table size
+    settings.tableSize = 6;                // set table size
 
     // World settings
     var assets = [];                      // All game objects\

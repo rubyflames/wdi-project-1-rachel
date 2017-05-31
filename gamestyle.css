@@ -76,6 +76,11 @@ h1 {
 
 .tg .grid{vertical-align:bottom;}
 
+
+.highlight {
+  background-color: red;
+}
+
 @media screen and (max-width: 767px) {
   .tg {width: auto !important;}
 .tg col {width: auto !important;}
