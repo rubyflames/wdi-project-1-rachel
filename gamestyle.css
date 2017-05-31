@@ -57,7 +57,7 @@ p {
 }
 .highlight:hover{
     cursor:pointer;
-    background-color: rgba(256,0,0,0.3);
+    background-color: rgba(256,0,0,0.5);
 }
 
 .tg td {

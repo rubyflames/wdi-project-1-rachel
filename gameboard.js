@@ -28,10 +28,29 @@ function GameBoard(settings) {
           col: parseInt( target.getAttribute('data-col'))
         }
 
-        // Link simelar sorounding jewels
+        // Link similar surrounding jewels
         var search = new Search(clickedJewel, jewels, settings);
-        search.start();
+        var toClear = search.start();
+        function newJewels() {
+          var toRemove = document.getElementsByClassName('grid highlight');
+          for (var i in toClear) {
+            console.log(toRemove[i].childNodes)
+              toRemove[i].removeChild(toRemove[i].childNodes[0]);
+          }
+        }
+        setTimeout(newJewels, 1000)
 
+
+        // Clear chain of jewels
+        //var clear = new Clear(connectedJewel,jewels,settings);
+        // var Clear = function (connectedJewel,jewels,settings){
+        //   connectedJewel.parentNode.removeChild(div);
+        // }
+
+//         var div = document.getElementById('cart_item');
+// while(div.firstChild){
+//     div.removeChild(div.firstChild);
+      // }
       });
    }
 

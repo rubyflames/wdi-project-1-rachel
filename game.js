@@ -18,7 +18,7 @@ var Game = function() {
     // Setup event listeners
     function setupEvents() {
 
-      document.getElementsByClassName('reset').addEventListener('click', g());
+      //var reset = document.getElementsByClassName('reset').addEventListener('click', init());
     }
 
     var frame = 0;
