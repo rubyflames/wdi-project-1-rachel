@@ -38,9 +38,13 @@ function GameBoard(settings) {
               toRemove[i].removeChild(toRemove[i].childNodes[0]);
           }
         }
-        setTimeout(newJewels, 1000)
-
-
+        /*
+        * Utilise the game loop, not timeout!
+        */
+        setTimeout(newJewels, 1000);
+        setTimeout(shift, 2000);
+        // setTimeout(remove, 2500);
+        setTimeout(reset, 2500);
         // Clear chain of jewels
         //var clear = new Clear(connectedJewel,jewels,settings);
         // var Clear = function (connectedJewel,jewels,settings){
@@ -54,6 +58,49 @@ function GameBoard(settings) {
       });
    }
 
+   function shift() {
+     var jewels = document.querySelectorAll('grid')
+     if (jewels.childNodes == null) {
+       console.log('empty grids exist')
+       var toRemove = document.getElementsByClassName('grid highlight');
+       console.log(toRemove)
+       for (var i =0; i < toRemove.length; i ++) {
+         var div = document.createElement('div')
+         console.log(toRemove[i])
+         toRemove[i].append(div)
+          console.log(toRemove[i].childNodes[0])
+         toRemove[i].childNodes[0].setAttribute("class","blue")
+       }
+      // var toRemove = document.getElementsByClassName('grid highlight');
+      // for (var i in toRemove) {
+      //   toRemove[i].classList.remove('highlight')
+    }
+}
+/*
+ *  Reset highlighted jewels
+ */
+ function reset(){
+  // rows
+  for(var i = 0; i<settings.tableSize;i++){
+    // cols
+    for(var j = 0; j<settings.tableSize;j++){
+      var cell = document.querySelectorAll('td[data-col="' + j +'"][data-row="'+ i +'"]');
+      cell[0].classList.remove('highlight');
+    }
+  }
+}
+
+// function remove() {
+//   var highlighted = document.getElementsByClassName('highlight');
+//   if (highlighted.length > 0) {
+//   for(var i =0; i < highlighted.length; i ++){
+//      //console.log(highlighted[i].classList)
+//     //highlighted[i].classList.remove('highlight')
+//     highlighted.pop();
+//        //console.log(highlighted[i].classList)
+//   }
+// }
+// }
   /*
    *  Create jewels
    */

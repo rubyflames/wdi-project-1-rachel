@@ -132,7 +132,7 @@ var Search = function(jewelPosition, jewels, settings){
       /*
        *  Reset highlighted jewels
        */
-      function reset(){
+       function reset(){
         // rows
         for(var i = 0; i<settings.tableSize;i++){
           // cols
