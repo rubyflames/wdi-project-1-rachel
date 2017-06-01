@@ -163,19 +163,19 @@ h3 {
   border-color: red;
   border-style: solid;
 }
-.start {
+#start {
   background-image: url("https://cdn.pixabay.com/photo/2013/07/13/11/42/audio-158489_640.png");
   background-position: cover;
   background-size: 100%;
   background-repeat: no-repeat;
 }
-.reset {
+#reset {
   background-image: url("http://4vector.com/i/free-vector-stop-audio-button-set-clip-art_104739_Stop_Audio_Button_Set_clip_art_hight.png");
   background-position: cover;
   background-size: 100%;
   background-repeat: no-repeat;
 }
-.pause {
+#pause {
   background-image: url("https://openclipart.org/image/2400px/svg_to_png/11576/akiross-Audio-Button-Set-1.png");
   background-position: cover;
   background-size: 100%;

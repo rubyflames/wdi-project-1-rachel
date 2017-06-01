@@ -122,6 +122,7 @@ var Search = function(jewelPosition, jewels, settings){
         }
 
         connectedJewels = connectedJewels.concat(foundJewels);
+        settings.connectedJewels = settings.connectedJewels.concat(foundJewels);
         for(var i=0; i<foundJewels.length;i++){
           findConnectedJewels(foundJewels[i].position.row, foundJewels[i].position.col, foundJewels[i])
         }
@@ -145,12 +146,15 @@ var Search = function(jewelPosition, jewels, settings){
 
       this.start = function(){
         reset();
+        // settings.connectedJewels = [];
         connectedJewels = [];
         jewel.position = {row: jewelPosition.row, col: jewelPosition.col};
         jewel.highlight();
         connectedJewels.push(jewel);
+        // settings.connectedJewels.push(jewel);
         findConnectedJewels(jewelPosition.row, jewelPosition.col, jewel);
 
         return connectedJewels;
+        // return settings.connectedJewels;
       }
 }

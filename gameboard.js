@@ -34,16 +34,18 @@ function GameBoard(settings) {
         function newJewels() {
           var toRemove = document.getElementsByClassName('grid highlight');
           for (var i in toClear) {
-            console.log(toRemove[i].childNodes)
-              toRemove[i].removeChild(toRemove[i].childNodes[0]);
+            console.log("To remove:"+toRemove[i])
+            // .getAttribute('class')
+            //toRemove[i].removeChild(toRemove[i].childNodes[0]);
+            //toRemove[i].classList.remove('');
           }
         }
         /*
         * Utilise the game loop, not timeout!
         */
+        //windows.requestAnimFrame(newJewels, 1);
         setTimeout(newJewels, 1000);
         setTimeout(shift, 2000);
-        // setTimeout(remove, 2500);
         setTimeout(reset, 2500);
         // Clear chain of jewels
         //var clear = new Clear(connectedJewel,jewels,settings);
@@ -58,22 +60,39 @@ function GameBoard(settings) {
       });
    }
 
+   //Replace conected chain with random jewels
    function shift() {
-     var jewels = document.querySelectorAll('grid')
-     if (jewels.childNodes == null) {
+      var toRemove = document.getElementsByClassName('grid highlight');
+     if (toRemove.length == 0) {
        console.log('empty grids exist')
-       var toRemove = document.getElementsByClassName('grid highlight');
-       console.log(toRemove)
+     }else{
        for (var i =0; i < toRemove.length; i ++) {
-         var div = document.createElement('div')
-         console.log(toRemove[i])
-         toRemove[i].append(div)
-          console.log(toRemove[i].childNodes[0])
-         toRemove[i].childNodes[0].setAttribute("class","blue")
+        console.log(toRemove[i].childNodes);
+        function init(){
+          var random = Math.floor((Math.random() * 100) + 1);
+
+          if (random < 26) {
+            console.log(random);
+            toRemove[i].childNodes[0].className='red';
+            self.type = 'red';
+          } else if (random< 51) {
+            console.log(random);
+            toRemove[i].childNodes[0].className='blue';
+            self.type = 'blue';
+          } else if (random < 76) {
+            console.log(random);
+            toRemove[i].childNodes[0].className='green';
+            self.type = 'green';
+          } else {
+            console.log(random);
+            toRemove[i].childNodes[0].className='hourglassplay';
+            self.type = 'hourglassplay';
+          };
+      };
+        init();
+        console.log(toRemove[i].childNodes[0].className)
        }
-      // var toRemove = document.getElementsByClassName('grid highlight');
-      // for (var i in toRemove) {
-      //   toRemove[i].classList.remove('highlight')
+
     }
 }
 /*
@@ -90,17 +109,7 @@ function GameBoard(settings) {
   }
 }
 
-// function remove() {
-//   var highlighted = document.getElementsByClassName('highlight');
-//   if (highlighted.length > 0) {
-//   for(var i =0; i < highlighted.length; i ++){
-//      //console.log(highlighted[i].classList)
-//     //highlighted[i].classList.remove('highlight')
-//     highlighted.pop();
-//        //console.log(highlighted[i].classList)
-//   }
-// }
-// }
+
   /*
    *  Create jewels
    */

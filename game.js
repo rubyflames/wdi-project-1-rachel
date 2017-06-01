@@ -8,6 +8,7 @@ var Game = function() {
     settings.godmode = false;              // Debug mode
     settings.timePerRound = 60;            // Time per round
     settings.tableSize = 6;                // set table size
+    settings.connectedJewels = [];
 
     // World settings
     var assets = [];                      // All game objects\
@@ -16,10 +17,13 @@ var Game = function() {
     interactions.click = false;           // Speace key pressed
 
     // Setup event listeners
-    function setupEvents() {
 
+    function setupEvents() {
+      //document.getElementById('pause').addEventListener('click', init())
       //var reset = document.getElementsByClassName('reset').addEventListener('click', init());
-    }
+      var buttons = new Button(settings);
+      }
+
 
     var frame = 0;
     var countdown = settings.timePerRound;
@@ -32,6 +36,7 @@ var Game = function() {
      *  Initialize game
      */
     function init(){
+     setupEvents();
     }
 
     /*
@@ -74,5 +79,6 @@ var Game = function() {
 
             init();
 }
+
 
 var g = new Game();
