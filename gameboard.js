@@ -13,61 +13,95 @@ function GameBoard(settings) {
   /*
    *  Setup events
    */
+
+   var buttons = document.getElementsByClassName('button');
+
+   console.log(buttons);
+   for(var i = 0; i < buttons.length;i++){
+     buttons[i].addEventListener('click', function(event){
+       var targetName = event.target;
+       console.log(targetName.id);
+       switch(targetName.id) {
+         case "reset": location.reload();
+           //reset the game
+           break;
+         case 'pause': window.cancelAnimationFrame(this.render);
+              requestId = undefined;
+           //pause the game
+           break;
+         case 'start': window.requestAnimationFrame(countdown);
+        //window.requestAnimationFrame(loop);
+           //continue the game
+           break;
+         default:
+           break;
+         }
+       });
+   }
+
    function setupEvents(){
+     function gameBoard(e){
 
-      gameBoardElement.addEventListener("click", function(e){
+      var target = e.target;
+      // Normalize if div is clicked
+      if(e.target.nodeName === "DIV"){
+        target = e.target.parentElement
+      }
 
-        var target = e.target;
-        // Normalize if div is clicked
-        if(e.target.nodeName === "DIV"){
-          target = e.target.parentElement
-        }
+      var clickedJewel = {
+        row : parseInt( target.getAttribute('data-row')),
+        col: parseInt( target.getAttribute('data-col'))
+      }
 
-        var clickedJewel = {
-          row : parseInt( target.getAttribute('data-row')),
-          col: parseInt( target.getAttribute('data-col'))
-        }
-
-        // Link similar surrounding jewels
-        var search = new Search(clickedJewel, jewels, settings);
+      // Link similar surrounding jewels
+      var search = new Search(clickedJewel, jewels, settings);
         var toClear = search.start();
-        function newJewels() {
-          var toRemove = document.getElementsByClassName('grid highlight');
-          for (var i in toClear) {
-            console.log("To remove:"+toRemove[i])
-            // .getAttribute('class')
-            //toRemove[i].removeChild(toRemove[i].childNodes[0]);
-            //toRemove[i].classList.remove('');
-          }
+      var hp = document.getElementById('hp')
+      console.log(parseInt(hp.innerHTML))
+      for (var i = 0; i < toClear.length; i++){
+        var hpleft=10; //for every i, i = 10
+        console.log('minus hp', parseInt(hp.innerHTML))
+        hp.innerHTML= (parseInt(hp.innerHTML) -hpleft) + " / 200 HP"
+      }
+
+      function newJewels() {
+        var toRemove = document.getElementsByClassName('grid highlight');
+        for (var i in toClear) {
+        //  console.log("To remove:"+toRemove[i])
+          // .getAttribute('class')
+          //toRemove[i].removeChild(toRemove[i].childNodes[0]);
+          //toRemove[i].classList.remove('');
         }
-        /*
-        * Utilise the game loop, not timeout!
-        */
-        //windows.requestAnimFrame(newJewels, 1);
-        setTimeout(newJewels, 1000);
-        setTimeout(shift, 2000);
-        setTimeout(reset, 2500);
-        // Clear chain of jewels
-        //var clear = new Clear(connectedJewel,jewels,settings);
-        // var Clear = function (connectedJewel,jewels,settings){
-        //   connectedJewel.parentNode.removeChild(div);
-        // }
+      }
+      /*
+      * Utilise the game loop, not timeout!
+      */
+      //windows.requestAnimFrame(newJewels, 1);
+      setTimeout(newJewels, 1000);
+      setTimeout(shift, 1500);
+      setTimeout(reset, 2000);
+      // Clear chain of jewels
+      //var clear = new Clear(connectedJewel,jewels,settings);
+      // var Clear = function (connectedJewel,jewels,settings){
+      //   connectedJewel.parentNode.removeChild(div);
+      // }
 
 //         var div = document.getElementById('cart_item');
 // while(div.firstChild){
 //     div.removeChild(div.firstChild);
-      // }
-      });
+    // }
+    }
+      gameBoardElement.addEventListener("click",gameBoard, true);
    }
 
    //Replace conected chain with random jewels
    function shift() {
       var toRemove = document.getElementsByClassName('grid highlight');
      if (toRemove.length == 0) {
-       console.log('empty grids exist')
+       //console.log('empty grids exist')
      }else{
        for (var i =0; i < toRemove.length; i ++) {
-        console.log(toRemove[i].childNodes);
+      //  console.log(toRemove[i].childNodes);
         function init(){
           var random = Math.floor((Math.random() * 100) + 1);
 
@@ -76,25 +110,25 @@ function GameBoard(settings) {
 
           //change type in table object itself + table in html
           if (random < 26) {
-            console.log(random);
+          //  console.log(random);
             toRemove[i].childNodes[0].className='red';
             jewels[row][col].type = 'red';
           } else if (random< 51) {
-            console.log(random);
+            //console.log(random);
             toRemove[i].childNodes[0].className='blue';
             jewels[row][col].type = 'blue';
           } else if (random < 76) {
-            console.log(random);
+          //  console.log(random);
             toRemove[i].childNodes[0].className='green';
             jewels[row][col].type = 'green';
           } else {
-            console.log(random);
+            //console.log(random);
             toRemove[i].childNodes[0].className='hourglassplay';
             jewels[row][col].type = 'hourglassplay';
           };
       };
         init();
-        console.log(toRemove[i].childNodes[0].className)
+      //  console.log(toRemove[i].childNodes[0].className)
        }
 
     }

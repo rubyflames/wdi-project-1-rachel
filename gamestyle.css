@@ -35,6 +35,8 @@ p {
   margin: 0px auto;
   padding: 80px 80px;
   position: absolute;
+  background-repeat: no-repeat;
+  background-position: center;
   background-image: url(http://2.bp.blogspot.com/-KeQGwHib3lQ/UD_fipguVQI/AAAAAAAAIgQ/JMv8lC9c2dE/s400/Diablo-june.gif);
   /*
   alternative images for mmonsters:

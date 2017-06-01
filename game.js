@@ -1,5 +1,5 @@
 var Game = function() {
-
+   var endgame = false;
     // Game settings
     var settings = {};                     // Containes all game settings
     settings.ballSpeed = 8;                // The speed of the ball
@@ -10,42 +10,55 @@ var Game = function() {
     settings.tableSize = 6;                // set table size
     settings.connectedJewels = [];
 
+
     // World settings
     var assets = [];                      // All game objects\
 
     var interactions = {};
     interactions.click = false;           // Speace key pressed
 
+
+    // function removeEventListener(gameBoard)
     // Setup event listeners
 
     function setupEvents() {
       //document.getElementById('pause').addEventListener('click', init())
       //var reset = document.getElementsByClassName('reset').addEventListener('click', init());
-      var buttons = document.getElementsByClassName('button');
-      buttons.addEventListener('click', function(event){
 
-      var targetName = event.target;
-      switch(targetName.id) {
-      	case reset: Game();
-      		//reset the game
-      		break;
-      	case pause: window.cancelAnimationFrame(requestId);
-             requestId = undefined;
-      		//pause the game
-      		break;
-      	case play: window.requestAnimationFrame(loop);
-      		//continue the game
-      		break;
-      	default:
-      		break;
-        }
-      })
+      var buttons = document.getElementsByClassName('button');
+
+      console.log(buttons);
+      for(var i = 0; i < buttons.length;i++){
+        buttons[i].addEventListener('click', function(event){
+          var targetName = event.target;
+          console.log(targetName.id);
+          switch(targetName.id) {
+          	case "reset": location.reload();
+          		//reset the game
+          		break;
+          	case 'pause': window.cancelAnimationFrame(this.render);
+                 requestId = undefined;
+          		//pause the game
+          		break;
+          	case 'start': window.requestAnimationFrame(countdown);
+           //window.requestAnimationFrame(loop);
+          		//continue the game
+          		break;
+          	default:
+          		break;
+            }
+          });
       }
+    }
 
 
     var frame = 0;
     var countdown = settings.timePerRound;
-
+    function checkEndGame (){
+      if (countdown == 0){
+        endgame = true;
+      }
+    }
     // Init gameboard
     var gameBoard = new GameBoard(settings);
     assets[0] = gameBoard;
@@ -66,11 +79,13 @@ var Game = function() {
         countdown--;
         document.getElementById("time").innerHTML= "Time left: " + countdown + " secs";
         //try to change the last display for the timer from -1 to 0
+        checkEndGame();
       }
-
+      if (endgame ==false) {
       for(var i=0; i < assets.length; i++){
         assets[i].render();
       }
+    } else {document.getElementsByTagName("table")[0].removeEventListener('click', gameBoard, true)}
 
       frame++; //frame needs to be included to count up, otherwise it would not wait for the full sec
     }
