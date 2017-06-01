@@ -25,9 +25,8 @@ Fonts: Google Fonts
 
 This project would not have been possible if not for the following:
 
-Many thanks to my WDI instructor, Jens Nielson, and wonderful TAs, Iskandar and Geng, for their immense patience and guidance with this project. They have provided a lot of help with the coding and debugging, as well as imparting their wisdom and advice. This project has not been an easy one to tackle, and I am grateful for their help thus far.
+I would like to thank my WDI instructor, Jens Nielson, and wonderful TAs, Iskandar and Geng Sng, for their immense patience and guidance with this project. They have provided a lot of help with the coding and debugging, as well as imparting their wisdom and advice. This project has not been an easy one to tackle, and I am extremely grateful for their help thus far.
 
-Many thanks to my classmates for being so supportive and helpful wherever possible (in no particular order):
-Translating of human logic to gaming algorithm and syntax: Alex Min, Elnathan Erh, Robyn Kwok
-Debugging: Elnathan Erh
-Encouragement: Woody See, Tiffany Chua, Dionne Phua, Xavier Bulner, Justin Cheong,
+Many thanks to my classmates for being so supportive and helpful wherever possible, be it translating of human logic to gaming algorithm and syntax, highlighting and explaining issues in my code, debugging, and encouragement.
+(In alphabetical order):
+Alex Min, Bryan Lee, Dionne Phua, Elnathan Erh, Geok Yan <u>Pek</u>, Han Xiang <u>Choong</u>, Hanif Samad, Isaac Koh, Justin Cheong, Robyn Kwok, Tiffany Chua, Woody See, Xavier Bulner
