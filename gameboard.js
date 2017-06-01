@@ -74,7 +74,7 @@ function GameBoard(settings) {
           var row = parseInt( toRemove[i].getAttribute('data-row') );
           var col = parseInt( toRemove[i].getAttribute('data-col') );
 
-
+          //change type in table object itself + table in html
           if (random < 26) {
             console.log(random);
             toRemove[i].childNodes[0].className='red';

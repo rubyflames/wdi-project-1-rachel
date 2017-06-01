@@ -21,7 +21,25 @@ var Game = function() {
     function setupEvents() {
       //document.getElementById('pause').addEventListener('click', init())
       //var reset = document.getElementsByClassName('reset').addEventListener('click', init());
-      var buttons = new Button(settings);
+      var buttons = document.getElementsByClassName('button');
+      buttons.addEventListener('click', function(event){
+
+      var targetName = event.target;
+      switch(targetName.id) {
+      	case reset: Game();
+      		//reset the game
+      		break;
+      	case pause: window.cancelAnimationFrame(requestId);
+             requestId = undefined;
+      		//pause the game
+      		break;
+      	case play: window.requestAnimationFrame(loop);
+      		//continue the game
+      		break;
+      	default:
+      		break;
+        }
+      })
       }
 
 
