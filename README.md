@@ -14,9 +14,10 @@ You have 60 seconds to do so.
 ------------------------------------------------------------------
 
 The Dungeon was created with HTML5, CSS and vanilla JavaScript.
-Math.random() used to generate jewel types in JavaScript
+Math.random() used to generate jewel types in JavaScript. Table object was created in JavaScript.
 Audio:
 •background music: Piercing Light (Mako Remix) by League of Legends mixed with Monster Attack! by tabletopaudio.com
+
 •game SFX: Spear Throw Sound (http://soundbible.com/1622-Spear-Throw.html) and Glass Break Sound (http://soundbible.com/1765-Glass-Break.html)
 
 Fonts: Google Fonts
@@ -29,4 +30,4 @@ I would like to thank my WDI instructor, Jens Nielson, and wonderful TAs, Iskand
 
 Many thanks to my classmates for being so supportive and helpful wherever possible, be it translating of human logic to gaming algorithm and syntax, highlighting and explaining issues in my code, debugging, and encouragement.
 (In alphabetical order):
-Alex Min, Bryan Lee, Dionne Phua, Elnathan Erh, Geok Yan <u>Pek</u>, Han Xiang <u>Choong</u>, Hanif Samad, Isaac Koh, Justin Cheong, Robyn Kwok, Tiffany Chua, Woody See, Xavier Bulner
+Alex Min, Bryan Lee, Dionne Phua, Elnathan Erh, Geok Yan Pek, Han Xiang Choong, Hanif Samad, Isaac Koh, Justin Cheong, Robyn Kwok, Tiffany Chua, Woody See, Xavier Bulner
