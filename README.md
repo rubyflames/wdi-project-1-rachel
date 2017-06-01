@@ -5,12 +5,23 @@ The Dungeon invites you to take up the most exciting challenge: a connect-3 game
 Bring the monster's HP down to 0 before time runs out.
 You have 60 seconds to do so.
 
+•Start by clicking on any jewel in the grid.
 
-Click on a jewel to connect a chain of at least 3 of the same kind in adjacent grids (horizontally, vertically, diagonally).
-Red, green and blue jewel chains will connect automatically to deduct HP from the monster.
-Hourglass chains will connect automatically to add time to the countdown timer.
+•Connect at least 3 jewels of the same colour to form an attack chain.
+•Adjacent jewels of the same colour will automatically chain together in any direction (horizontally, vertically and diagonally).
+•The longer the chain, the more powerful the attack!
 
-The longer the chain, the greater the damage dealt to the monster, or the more time added to the countdown timer.
+------------------------------------------------------------------
+
+The Dungeon was created with HTML5, CSS and vanilla JavaScript.
+Math.random() used to generate jewel types in JavaScript
+Audio:
+•background music: Piercing Light (Mako Remix) by League of Legends mixed with Monster Attack! by tabletopaudio.com
+•game SFX: Spear Throw Sound (http://soundbible.com/1622-Spear-Throw.html) and Glass Break Sound (http://soundbible.com/1765-Glass-Break.html)
+
+Fonts: Google Fonts
+
+------------------------------------------------------------------
 
 This project would not have been possible if not for the following:
 

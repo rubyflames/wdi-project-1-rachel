@@ -129,8 +129,8 @@ function GameBoard(settings) {
             jewels[row][col].type = 'green';
           } else {
             //console.log(random);
-            toRemove[i].childNodes[0].className='hourglassplay';
-            jewels[row][col].type = 'hourglassplay';
+            toRemove[i].childNodes[0].className='yellow';
+            jewels[row][col].type = 'yellow';
           };
       };
         init();

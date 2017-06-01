@@ -39,8 +39,8 @@ var Jewel = function(settings, pos) {
         self.type = 'green';
       } else {
         console.log(random);
-        jewelElement.classList.add('hourglassplay');
-        self.type = 'hourglassplay';
+        jewelElement.classList.add('yellow');
+        self.type = 'yellow';
       };
   };
 

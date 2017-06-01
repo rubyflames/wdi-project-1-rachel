@@ -12,8 +12,8 @@ body{
   font-family: 'Patua One', cursive;
 }
 
-h1 {
-
+h2 {
+  font-family: 'Montserrat Subrayada', sans-serif;
   color: #ffffff;
 }
 p {
@@ -146,8 +146,8 @@ h3 {
   background-size: 100%;
   background-repeat: no-repeat;
 }
-.hourglassplay {
-  background-image: url("./Hourglass-01.png");
+.yellow {
+  background-image: url("./yellow-TOPJEWEL.png");
   height: 40px;
   width: 40px;
   background-position: cover;
