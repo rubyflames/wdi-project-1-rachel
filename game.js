@@ -95,7 +95,7 @@ var Game = function() {
       console.log(parseInt(hp.innerHTML))
       if (parseInt(hp.innerHTML) < 1 && countdown>0){
         alert('You defeated the monster! Refresh the page twice to challenge the dungeon again!')
-      } else if (parseInt(hp.innerHTML) > 1 && countdown<0){
+      } else if (countdown===0){
         alert('GAME OVER! Fret not, young adventurer. Refresh the page twice to challenge the dungeon again!')
       }
 

@@ -9,15 +9,21 @@ body{
   background-position: cover;
   background-size: 100%;
   background-repeat: no-repeat;
+  font-family: 'Patua One', cursive;
 }
 
 h1 {
-  font-family: sans-serif;
+
   color: #ffffff;
 }
 p {
-  font-family: sans-serif;
+  font-size: 16px;
   color: #ffffff;
+  background-color: rgba(0, 0, 0, 0.1);
+}
+
+h3 {
+  color: #efefef;
 }
 
 #playable {
@@ -149,10 +155,7 @@ p {
   background-repeat: no-repeat;
 }
 
-h3 {
-  font-family: cursive;
-  color: #afafaf;
-}
+
 
 .button {
   height: 40px;
@@ -182,6 +185,11 @@ h3 {
   background-position: cover;
   background-size: 100%;
   background-repeat: no-repeat;
+}
+
+#audio {
+  position: relative;
+  window.position: bottom;
 }
 
 /*

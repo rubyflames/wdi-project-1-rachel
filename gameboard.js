@@ -58,13 +58,23 @@ function GameBoard(settings) {
         var toClear = search.start();
       var hp = document.getElementById('hp');
       var connect = new Audio('./audio/spear_throw.mp3')
+      var chain = new Audio('./audio/Glass_Break.mp3')
       connect.play();
       console.log(parseInt(hp.innerHTML));
+      // for (var i = 0; i < 2; i++){
+      //   console.log('invalid chain');
+      //   // }
+      // }
       for (var i = 2; i < toClear.length; i++){
-        var hpleft=10; //for every i, i = 10
+        // if (toClear[i].type = 'hourglassplay'){
+        //   var addtime=2;
+        //   // countdown = countdown + addtime;
+        //   document.getElementById("time").innerHTML= "Time left: " + (countdown+addtime) + " secs";
+        // } else {
+          var hpleft=10; //for every i, i = 10
         console.log('minus hp', parseInt(hp.innerHTML))
         hp.innerHTML= (parseInt(hp.innerHTML) -hpleft) + " / 2000 HP"
-
+        // }
       }
 
 
@@ -73,7 +83,8 @@ function GameBoard(settings) {
       */
 
       setTimeout(shift, 400);
-      setTimeout(reset, 800);
+      chain.play();
+      setTimeout(reset, 600);
       // Clear chain of jewels
       //var clear = new Clear(connectedJewel,jewels,settings);
       // var Clear = function (connectedJewel,jewels,settings){
