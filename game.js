@@ -88,9 +88,19 @@ var Game = function() {
     } else {document.getElementsByTagName("table")[0].removeEventListener('click', gameBoard, true)}
 
       frame++; //frame needs to be included to count up, otherwise it would not wait for the full sec
+
+    gameOver();
+    function gameOver(){
+      var hp = document.getElementById('hp')
+      console.log(parseInt(hp.innerHTML))
+      if (parseInt(hp.innerHTML) < 1 && countdown>0){
+        alert('You defeated the monster! Refresh the page to challenge the dungeon again!')
+      } else if (parseInt(hp.innerHTML) > 1 && countdown==0){
+        alert('GAME OVER! Fret not, young adventurer. Refresh the page to challenge the dungeon again!')
+      }
+
     }
-
-
+    }
 
     /*
      *  Game loop. Don't touch ;-)
