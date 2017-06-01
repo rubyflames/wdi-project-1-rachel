@@ -71,22 +71,26 @@ function GameBoard(settings) {
         function init(){
           var random = Math.floor((Math.random() * 100) + 1);
 
+          var row = parseInt( toRemove[i].getAttribute('data-row') );
+          var col = parseInt( toRemove[i].getAttribute('data-col') );
+
+
           if (random < 26) {
             console.log(random);
             toRemove[i].childNodes[0].className='red';
-            self.type = 'red';
+            jewels[row][col].type = 'red';
           } else if (random< 51) {
             console.log(random);
             toRemove[i].childNodes[0].className='blue';
-            self.type = 'blue';
+            jewels[row][col].type = 'blue';
           } else if (random < 76) {
             console.log(random);
             toRemove[i].childNodes[0].className='green';
-            self.type = 'green';
+            jewels[row][col].type = 'green';
           } else {
             console.log(random);
             toRemove[i].childNodes[0].className='hourglassplay';
-            self.type = 'hourglassplay';
+            jewels[row][col].type = 'hourglassplay';
           };
       };
         init();
