@@ -58,10 +58,10 @@ function GameBoard(settings) {
         var toClear = search.start();
       var hp = document.getElementById('hp')
       console.log(parseInt(hp.innerHTML))
-      for (var i = 0; i < toClear.length; i++){
+      for (var i = 2; i < toClear.length; i++){
         var hpleft=10; //for every i, i = 10
         console.log('minus hp', parseInt(hp.innerHTML))
-        hp.innerHTML= (parseInt(hp.innerHTML) -hpleft) + " / 200 HP"
+        hp.innerHTML= (parseInt(hp.innerHTML) -hpleft) + " / 500 HP"
       }
 
       function newJewels() {
