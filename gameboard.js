@@ -56,30 +56,24 @@ function GameBoard(settings) {
       // Link similar surrounding jewels
       var search = new Search(clickedJewel, jewels, settings);
         var toClear = search.start();
-      var hp = document.getElementById('hp')
-      console.log(parseInt(hp.innerHTML))
+      var hp = document.getElementById('hp');
+      var connect = new Audio('./audio/spear_throw.mp3')
+      connect.play();
+      console.log(parseInt(hp.innerHTML));
       for (var i = 2; i < toClear.length; i++){
         var hpleft=10; //for every i, i = 10
         console.log('minus hp', parseInt(hp.innerHTML))
         hp.innerHTML= (parseInt(hp.innerHTML) -hpleft) + " / 2000 HP"
+
       }
 
-      function newJewels() {
-        var toRemove = document.getElementsByClassName('grid highlight');
-        for (var i in toClear) {
-        //  console.log("To remove:"+toRemove[i])
-          // .getAttribute('class')
-          //toRemove[i].removeChild(toRemove[i].childNodes[0]);
-          //toRemove[i].classList.remove('');
-        }
-      }
+
       /*
       * Utilise the game loop, not timeout!
       */
-      //windows.requestAnimFrame(newJewels, 1);
-      setTimeout(newJewels, 1000);
-      setTimeout(shift, 1500);
-      setTimeout(reset, 2000);
+
+      setTimeout(shift, 400);
+      setTimeout(reset, 800);
       // Clear chain of jewels
       //var clear = new Clear(connectedJewel,jewels,settings);
       // var Clear = function (connectedJewel,jewels,settings){
@@ -95,6 +89,7 @@ function GameBoard(settings) {
    }
 
    //Replace conected chain with random jewels
+
    function shift() {
       var toRemove = document.getElementsByClassName('grid highlight');
      if (toRemove.length == 0) {
