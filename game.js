@@ -94,9 +94,9 @@ var Game = function() {
       var hp = document.getElementById('hp')
       console.log(parseInt(hp.innerHTML))
       if (parseInt(hp.innerHTML) < 1 && countdown>0){
-        alert('You defeated the monster! Refresh the page to challenge the dungeon again!')
-      } else if (parseInt(hp.innerHTML) > 1 && countdown==0){
-        alert('GAME OVER! Fret not, young adventurer. Refresh the page to challenge the dungeon again!')
+        alert('You defeated the monster! Refresh the page twice to challenge the dungeon again!')
+      } else if (parseInt(hp.innerHTML) > 1 && countdown<0){
+        alert('GAME OVER! Fret not, young adventurer. Refresh the page twice to challenge the dungeon again!')
       }
 
     }

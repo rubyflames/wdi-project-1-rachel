@@ -61,7 +61,7 @@ function GameBoard(settings) {
       for (var i = 2; i < toClear.length; i++){
         var hpleft=10; //for every i, i = 10
         console.log('minus hp', parseInt(hp.innerHTML))
-        hp.innerHTML= (parseInt(hp.innerHTML) -hpleft) + " / 500 HP"
+        hp.innerHTML= (parseInt(hp.innerHTML) -hpleft) + " / 2000 HP"
       }
 
       function newJewels() {
