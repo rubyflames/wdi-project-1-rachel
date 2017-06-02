@@ -99,6 +99,8 @@ var Game = function() {
 
       } else if (countdown===0){
         // set gameover screen to display
+        // var gameoveraudio = new Audio('./audio/slowedbreathing_short.mp3')
+        // gameoveraudio.play();
         document.getElementById('gameover-screen').style.display = 'block';
         setTimeout(function(){
           location.reload();

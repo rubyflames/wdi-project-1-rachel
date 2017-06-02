@@ -1,5 +1,5 @@
 # wdi-project-1-rachel
-Rachel's Project 1 (Game) for WDI10 Singapore
+Rachel Lee's Project 1 (Game) for WDI10 Singapore
 
 The Dungeon invites you to take up the most exciting challenge: a connect-3 game with a twist!
 Bring the monster's HP down to 0 before time runs out.
@@ -13,8 +13,12 @@ You have 60 seconds to do so.
 
 ------------------------------------------------------------------
 
-The Dungeon was created with HTML5, CSS and vanilla JavaScript.
+The Dungeon was created with HTML5, CSS and vanilla JavaScript after 2 weeks in General Assembly's Web Development Immersive course. The creator did not have any knowledge on programming/coding prior to this course.
+
 Math.random() used to generate jewel types in JavaScript. Table object was created in JavaScript.
+
+Background gif: Redditor RudeBootie (source: https://www.reddit.com/r/gaming/comments/1d7g1p/i_have_a_huge_collection_of_fighting_game/)
+monster gif: source: http://2.bp.blogspot.com/-KeQGwHib3lQ/UD_fipguVQI/AAAAAAAAIgQ/JMv8lC9c2dE/s400/Diablo-june.gif
 Audio:
 •background music: Piercing Light (Mako Remix) by League of Legends mixed with Monster Attack! by tabletopaudio.com
 
@@ -30,4 +34,4 @@ I would like to thank my WDI instructor, Jens Nielson, and wonderful TAs, Iskand
 
 Many thanks to my classmates for being so supportive and helpful wherever possible, be it translating of human logic to gaming algorithm and syntax, highlighting and explaining issues in my code, debugging, and encouragement.
 (In alphabetical order):
-Alex Min, Bryan Lee, Dionne Phua, Elnathan Erh, Geok Yan Pek, Han Xiang Choong, Hanif Samad, Isaac Koh, Justin Cheong, Robyn Kwok, Tiffany Chua, Woody See, Xavier Bulner
+Alex Min, Bryan Lee, Dhea Mariesta, Dionne Phua, Elnathan Erh, Geok Yan Pek, Han Xiang Choong, Hanif Samad, Isaac Koh, Justin Cheong, Robyn Kwok, Tiffany Chua, Woody See, Xavier Bulner
