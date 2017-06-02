@@ -23,7 +23,7 @@
 <body>
   <!--<body onload="fnLoad()">-->
   <div id="start-screen">
-    <h2>Are you ready to challenge the dungeon?</h2>
+    <h4>Are you ready to challenge</h4><h2>the dungeon?</h2>
     <p>
       •Defeat the monster by bringing its HP to 0 before 60 seconds are up!
       <br />•Start by clicking once on any jewel in the grid.
@@ -33,6 +33,18 @@
       <br />•The longer the chain, the more powerful the attack!
     </p>
     <button type="button" name="start-btn" id="start-btn">START</button>
+  </div>
+  <div id="gameover-screen" style="display:none">
+    <h2>GAME OVER</h2>
+    <p>Fret not, young adventurer! You'll get to challenge the dungeon again.
+    </p>
+  </div>
+  <div id="win-screen" style="display:none">
+    <h2>YOU WON!</h2>
+    <p>The monster has been defeated and victory is yours!
+      <br />Alas, another one has spawned.
+      <br />Have your weapons at ready!
+    </p>
   </div>
 
 
@@ -66,7 +78,7 @@
 <br />
 <br />
 <div class="container">
-  <audio controls id="audio" autoplay="./audio/gamebgm_piercinglight_MakoRemix.mp3" loop>
+  <audio id="audio" autoplay="./audio/gamebgm_piercinglight_MakoRemix.mp3" loop>
     <source src="./audio/gamebgm_piercinglight_MakoRemix.mp3">
     <source src="./audio/gamebgm_piercinglight_MakoRemix.wav">
   </audio>

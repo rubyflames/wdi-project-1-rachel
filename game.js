@@ -90,11 +90,19 @@ var Game = function() {
     gameOver();
     function gameOver(){
       var hp = document.getElementById('hp')
-      console.log(parseInt(hp.innerHTML))
+      //console.log(parseInt(hp.innerHTML))
       if (parseInt(hp.innerHTML) < 1 && countdown>0){
-        alert('You defeated the monster! Refresh the page twice to challenge the dungeon again!')
+        document.getElementById('win-screen').style.display = 'block';
+        setTimeout(function(){
+          location.reload();
+        }, 9000)
+
       } else if (countdown===0){
-        alert('GAME OVER! Fret not, young adventurer. Refresh the page twice to challenge the dungeon again!')
+        // set gameover screen to display
+        document.getElementById('gameover-screen').style.display = 'block';
+        setTimeout(function(){
+          location.reload();
+        }, 7000)
       }
 
     }

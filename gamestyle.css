@@ -15,6 +15,12 @@ body{
 h2 {
   font-family: 'Montserrat Subrayada', sans-serif;
   color: #ffffff;
+  font-size: 80px;
+}
+h2 {
+  font-family: 'Montserrat Subrayada', sans-serif;
+  color: #ffffff;
+  font-size: 40px;
 }
 p {
   font-size: 20px;
@@ -27,6 +33,30 @@ h3 {
 }
 
 #start-screen {
+  background-image: url(http://imgs.abduzeedo.com/files/articles/wicked-fighting-game-background-gifs/njPhhkca.gif);
+  background-position: cover;
+  background-size: 100%;
+  background-repeat: no-repeat;
+  position: absolute;
+  height:100vh;
+  width: 100vw;
+  z-index: 1;
+  text-align: center;
+}
+
+#gameover-screen {
+  background-image: url(http://imgs.abduzeedo.com/files/articles/wicked-fighting-game-background-gifs/njPhhkca.gif);
+  background-position: cover;
+  background-size: 100%;
+  background-repeat: no-repeat;
+  position: absolute;
+  height:100vh;
+  width: 100vw;
+  z-index: 1;
+  text-align: center;
+}
+
+#win-screen {
   background-image: url(http://imgs.abduzeedo.com/files/articles/wicked-fighting-game-background-gifs/njPhhkca.gif);
   background-position: cover;
   background-size: 100%;
@@ -81,33 +111,27 @@ h3 {
 }
 
 .tg td {
-  /*font-family:Arial, sans-serif;
-  font-size:14px;
-  padding:0px 0px;*/
   padding:10px 10px;
   border-style: solid;
   border-color: white;
   border-width: 1px;
   overflow: hidden;
-  /*word-break:normal;*/
   height: 70px;
   width: 70px;
 }
 .tg th {
-  /*font-family:Arial, sans-serif;
-  font-size:14px;
-  font-weight:normal;*/
   padding:10px 10px;
   border-style: solid;
   border-color: white;
   border-width:1px;
   overflow:hidden;
-  /*word-break:normal;*/
   height: 70px;
   width: 70px;
 }
 
-.tg .grid{vertical-align:bottom;}
+.tg .grid{
+  vertical-align:bottom;
+}
 
 
 .highlight {
@@ -126,7 +150,6 @@ h3 {
 .jewel {
   height: 50px;
   width: 50px;
-  /*background-color: red;*/
   position: center;
   top: 25px;
   left: 25px;
@@ -187,10 +210,14 @@ h3 {
   background-repeat: no-repeat;
 }
 #reset {
+  opacity: 0.5;
   background-image: url("http://4vector.com/i/free-vector-stop-audio-button-set-clip-art_104739_Stop_Audio_Button_Set_clip_art_hight.png");
   background-position: cover;
   background-size: 100%;
   background-repeat: no-repeat;
+}
+#reset:hover {
+  opacity: 1.0;
 }
 #pause {
   background-image: url("https://openclipart.org/image/2400px/svg_to_png/11576/akiross-Audio-Button-Set-1.png");
@@ -203,71 +230,3 @@ h3 {
   position: relative;
   window.position: bottom;
 }
-
-/*
-older CSS
-*/
-
-/*
-*{
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
-  box-sizing: border-box;
-}
-
-select {
-    padding:3px;
-    margin: 0;
-    -webkit-border-radius:4px;
-    -moz-border-radius:4px;
-    border-radius:4px;
-    -webkit-box-shadow: 0 3px 0 #ccc, 0 -1px #fff inset;
-    -moz-box-shadow: 0 3px 0 #ccc, 0 -1px #fff inset;
-    box-shadow: 0 3px 0 #ccc, 0 -1px #fff inset;
-    background: #f8f8f8;
-    color:#888;
-    border:none;
-    outline:none;
-    display: inline-block;
-    -webkit-appearance:none;
-    -moz-appearance:none;
-    appearance:none;
-    cursor:pointer;
-    width:100px;
-}
-
-
-.minContainer {
-    padding: 20px;
-    padding-right: 30px;
-    position: absolute;
-}
-
-table {
-    border-collapse:collapse;
-    table-layout: fixed;
-    border-spacing: 0;
-}
-.td {
-    border: 2px solid #cccccc;
-    font-size:20px;
-    font-family:"Helvetica Neue", Helvetica, Arial, sans-serif;
-    color:#ccc;
-    line-height: 1.428571429;
-    width: 30px;
-    height: 32px;
-    min-width: 32px;
-    max-width: 32px;
-    min-height: 32px;
-    max-height: 32px;
-    text-align: center;
-}
-
-.X{
-    background-color: #FF8362;
-}
-
-.O{
-    background-color: #BB7365;
-}
-*/
