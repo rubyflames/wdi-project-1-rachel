@@ -2,8 +2,8 @@ var Game = function() {
    var endgame = false;
     // Game settings
     var settings = {};                     // Containes all game settings
-    settings.ballSpeed = 8;                // The speed of the ball
-    settings.walls = true;                 // The ball can not go outside the screen
+    // settings.ballSpeed = 8;                // The speed of the ball
+    // settings.walls = true;                 // The ball can not go outside the screen
     settings.automatic = false;            // The ball will move by itself
     settings.godmode = false;              // Debug mode
     settings.timePerRound = 60;            // Time per round
@@ -15,15 +15,13 @@ var Game = function() {
     var assets = [];                      // All game objects\
 
     var interactions = {};
-    interactions.click = false;           // Speace key pressed
+    interactions.click = false;           // left click
 
 
-    // function removeEventListener(gameBoard)
+
     // Setup event listeners
 
     function setupEvents() {
-      //document.getElementById('pause').addEventListener('click', init())
-      //var reset = document.getElementsByClassName('reset').addEventListener('click', init());
 
       var buttons = document.getElementsByClassName('button');
 
@@ -36,11 +34,11 @@ var Game = function() {
           	case "reset": location.reload();
           		//reset the game
           		break;
-          	case 'pause': window.cancelAnimationFrame(this.render);
-                 requestId = undefined;
-          		//pause the game
-          		break;
-          	case 'start': window.requestAnimationFrame(countdown);
+          	// case 'pause': window.cancelAnimationFrame(this.render);
+            //      requestId = undefined;
+          	// 	//pause the game
+          	// 	break;
+          	// case 'start': window.requestAnimationFrame(countdown);
            //window.requestAnimationFrame(loop);
           		//continue the game
           		break;
@@ -123,5 +121,7 @@ var Game = function() {
             init();
 }
 
-
-var g = new Game();
+document.getElementById('start-btn').addEventListener('click', function(){
+  document.getElementById('start-screen').setAttribute('style','display: none;')
+  var g = new Game();
+})

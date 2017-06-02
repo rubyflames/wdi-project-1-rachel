@@ -5,7 +5,7 @@ The Dungeon invites you to take up the most exciting challenge: a connect-3 game
 Bring the monster's HP down to 0 before time runs out.
 You have 60 seconds to do so.
 
-•Start by clicking on any jewel in the grid.
+•Start by clicking once on any jewel in the grid.
 
 •Connect at least 3 jewels of the same colour to form an attack chain.
 •Adjacent jewels of the same colour will automatically chain together in any direction (horizontally, vertically and diagonally).

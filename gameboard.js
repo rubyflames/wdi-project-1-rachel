@@ -64,14 +64,9 @@ function GameBoard(settings) {
       // for (var i = 0; i < 2; i++){
       //   console.log('invalid chain');
       //   // }
-      // }
+
       for (var i = 2; i < toClear.length; i++){
-        // if (toClear[i].type = 'hourglassplay'){
-        //   var addtime=2;
-        //   // countdown = countdown + addtime;
-        //   document.getElementById("time").innerHTML= "Time left: " + (countdown+addtime) + " secs";
-        // } else {
-          var hpleft=10; //for every i, i = 10
+          var hpleft=10; //for every i after 2, i = 10
         console.log('minus hp', parseInt(hp.innerHTML))
         hp.innerHTML= (parseInt(hp.innerHTML) -hpleft) + " / 2000 HP"
         // }
@@ -82,14 +77,10 @@ function GameBoard(settings) {
       * Utilise the game loop, not timeout!
       */
 
-      setTimeout(shift, 400);
+      setTimeout(shift, 300);
       chain.play();
-      setTimeout(reset, 600);
-      // Clear chain of jewels
-      //var clear = new Clear(connectedJewel,jewels,settings);
-      // var Clear = function (connectedJewel,jewels,settings){
-      //   connectedJewel.parentNode.removeChild(div);
-      // }
+      setTimeout(reset, 500);
+      
 
 //         var div = document.getElementById('cart_item');
 // while(div.firstChild){

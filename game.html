@@ -22,15 +22,19 @@
 </head>
 <body>
   <!--<body onload="fnLoad()">-->
+  <div id="start-screen">
     <h2>Are you ready to challenge the dungeon?</h2>
     <p>
       •Defeat the monster by bringing its HP to 0 before 60 seconds are up!
-      <br />•Start by clicking on any jewel in the grid.
+      <br />•Start by clicking once on any jewel in the grid.
       <br />
       <br />•Connect at least 3 jewels of the same colour to form an attack chain.
       <br />•Adjacent jewels of the same colour will automatically chain together<br /> in any direction (horizontally, vertically and diagonally).
       <br />•The longer the chain, the more powerful the attack!
     </p>
+    <button type="button" name="start-btn" id="start-btn">START</button>
+  </div>
+
 
     <div class ="container">
       <!--Monster display row-->
@@ -61,10 +65,13 @@
 <br />
 <br />
 <br />
-<audio controls id="audio" autoplay="./audio/gamebgm_piercinglight_MakoRemix.mp3" loop>
-  <source src="./audio/gamebgm_piercinglight_MakoRemix.mp3">
-  <source src="./audio/gamebgm_piercinglight_MakoRemix.wav">
-</audio>
+<div class="container">
+  <audio controls id="audio" autoplay="./audio/gamebgm_piercinglight_MakoRemix.mp3" loop>
+    <source src="./audio/gamebgm_piercinglight_MakoRemix.mp3">
+    <source src="./audio/gamebgm_piercinglight_MakoRemix.wav">
+  </audio>
+</div>
+
 
 <script type="text/javascript" src="jewel.js"></script>
 <script type="text/javascript" src="search.js"></script>
