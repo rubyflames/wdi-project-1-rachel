@@ -13,9 +13,9 @@ You have 60 seconds to do so.
 
 ------------------------------------------------------------------
 
-The Dungeon was created with HTML5, CSS and vanilla JavaScript after 2 weeks in General Assembly's Web Development Immersive course. The creator did not have any knowledge on programming/coding prior to this course.
+The Dungeon was created with HTML5, CSS and vanilla Javascript in the 3rd week of General Assembly's Web Development Immersive course. The creator did not have any knowledge on programming/coding before this course.
 
-Math.random() used to generate jewel types in JavaScript. Table object was created in JavaScript.
+Math.random() used to generate jewel types in JavaScript. Table object was created in Javascript. Recursive loops were used to calculate the position and length of attack chains. Timer was created in javascript.
 
 Background gif: Redditor RudeBootie (source: https://www.reddit.com/r/gaming/comments/1d7g1p/i_have_a_huge_collection_of_fighting_game/)
 monster gif: source: http://2.bp.blogspot.com/-KeQGwHib3lQ/UD_fipguVQI/AAAAAAAAIgQ/JMv8lC9c2dE/s400/Diablo-june.gif
